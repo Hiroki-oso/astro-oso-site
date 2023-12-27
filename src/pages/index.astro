@@ -2,25 +2,26 @@
 // components script
 import Main from "../layouts/Main.astro";
 const profilePicture = "https://i.imgur.com/JPGFE75.jpg";
+console.log("Hola Mundo!!!")
 ---
 <!-- components templete -->
 <Main>
 	<div class="profile">
 		<img 
-				src={profilePicture} 
-				alt="Frau katerina's website" 
-				width="100px" 
-				height="100px" 
-				class="profile__picture"
-			/>
-			<div class="profile__details">
-				<h1>Frau katerina</h1>
-				<h2>VP of Engineering at Goooogle</h2>
-				<p>
-					Helping devlopers be excllent and succeed at building scalable products
-				</p>
-			</div>
-	 </div>
+		src={profilePicture} 
+		alt="Frau katerina's website" 
+		width="100px" 
+		height="100px" 
+		class="profile__picture"
+		/>
+		<div class="profile__details">
+			<h1>Frau katerina</h1>
+			<h2>VP of Engineering at Goooogle</h2>
+			<p>
+				Helping devlopers be excllent and succeed at building scalable products
+			</p>
+		</div>
+	</div>
 </Main>
 
 <style>
