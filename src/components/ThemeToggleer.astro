@@ -32,4 +32,26 @@
  .sun {
   fill: transparent;
  }
+
+ :global(.dark) .sun {
+  fill: black;
+ }
+
+ :global(.dark) .moon {
+  fill: transparent;
+ }
 </style>
+
+<script>
+  const DARK_THEME_CLASS = "dark";
+
+  // Grab the toggle
+  const toggle = document.querySelector("button");
+  const rootEl = document.documentElement;
+
+  if(toggle) {
+    toggle.addEventListener("click", ()=> {
+      rootEl.classList.toggle(DARK_THEME_CLASS);
+    })
+  }
+</script>
