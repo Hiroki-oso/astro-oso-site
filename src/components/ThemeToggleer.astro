@@ -46,6 +46,7 @@
  }
 </style>
 
+
 <script>
   const DARK_THEME_CLASS = "dark";
   const COLOUR_MODE = "COLOUR_MODE";
@@ -56,32 +57,11 @@
   const toggle = document.querySelector("button");
   const rootEl = document.documentElement;
 
-  const getInitialColourMode = () => {
-    const previouslySavedColourMode = window.localStorage.getItem(COLOUR_MODE);
 
-    if(previouslySavedColourMode) {
-      return previouslySavedColourMode;
-    }
 
-    if (window.matchMedia("(prefers-color-schema: dark").matches){
-      return DARK_THEME
-    }
+  
 
-    return LIGHT_THEME;
-  }
-
-  const InitialColourMode = getInitialColourMode();
-
-  const setInitialColourMode = (mode: string) => {
-    // set required class on the root element
-    if(mode === LIGHT_THEME) {
-      rootEl.classList.remove(DARK_THEME_CLASS)
-    } else {
-      rootEl.classList.add(DARK_THEME_CLASS)
-    }
-  }
-
-  setInitialColourMode(InitialColourMode);
+ 
 
   if(toggle) {
     toggle.addEventListener("click", ()=> {
