@@ -35,3 +35,13 @@ main {
   max-width: 40rem;
   margin: auto;
 }
+
+p,
+li {
+  font-size: 1rem;
+  color: var(--gray-400);
+  opacity: 0.7;
+}
+li {
+  margin: 1rem 0;
+}
