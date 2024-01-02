@@ -1,8 +1,9 @@
 ---
 // components script
 import Main from "../layouts/Main.astro";
+import Cards from '../components/Cards.astro';
 const profilePicture = "https://i.imgur.com/JPGFE75.jpg";
-console.log("Hola Mundo!!!")
+
 ---
 <!-- components templete -->
 <Main title="Frau Katerina">
@@ -22,6 +23,27 @@ console.log("Hola Mundo!!!")
 			</p>
 		</div>
 	</div>
+
+	<Cards cards={[
+		{
+			title: "Here are my guiding philosophies for life",
+			gradientFrom: "#818cf8",
+			gradientTo: "#d8b4fe",
+			to: "/philosophies",
+		},
+		{
+			title: "A summary of my work history",
+			gradientFrom: "#fde68a",
+			gradientTo: "#fca5a5",
+			to: "/work-summary",
+		},
+		{
+			title: "What I do beyond technologhy",
+			gradientFrom: "#6ee7b7",
+			gradientTo: "#9333ea",
+			to: "/beyond-tech",
+		},
+	]} />
 </Main>
 
 <style>
