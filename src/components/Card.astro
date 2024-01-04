@@ -55,3 +55,14 @@ const {to, title, gradientFrom, gradientTo} = Astro.props
     line-height: 1.75rem;
   }
 </style>
+
+<script define:vars={{gradientFrom, gradientTo}}>
+  console.log(gradientFrom)
+</script>
+
+<script>
+  const card = document.querySelector('.card');
+  if(card instanceof HTMLElement) {
+    console.log(card.dataset.gradientFrom)
+  }
+</script>
